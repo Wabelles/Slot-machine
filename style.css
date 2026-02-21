@@ -2,10 +2,10 @@
   --bg1:#07070a;
   --bg2:#0b1020;
 
-  --cab1:#7b0f1a;     /* cabinet red */
-  --cab2:#3d050b;     /* cabinet shadow */
-  --gold1:#f6d37a;    /* warm gold */
-  --gold2:#b9831e;    /* darker gold */
+  --cab1:#7b0f1a;     
+  --cab2:#3d050b;     
+  --gold1:#f6d37a;    
+  --gold2:#b9831e;    
   --chrome1:#f2f2f3;
   --chrome2:#a7a7ad;
 
@@ -40,7 +40,7 @@ body{
   position:relative;
   width: min(900px, 100%);
   border-radius: var(--radius);
-  padding: 16px 90px 28px 18px; /* lever room */
+  padding: 16px 90px 28px 18px; 
   box-shadow: var(--shadow);
   background:
     linear-gradient(180deg, rgba(255,255,255,.08), transparent 26%),
@@ -50,7 +50,7 @@ body{
   overflow:hidden;
 }
 
-/* Cabinet trim */
+
 .machine::before{
   content:"";
   position:absolute; inset:10px;
@@ -62,7 +62,6 @@ body{
   pointer-events:none;
 }
 
-/* ---------- Marquee ---------- */
 .top{ margin-bottom: 14px; position:relative; z-index:1; }
 
 .marquee{
@@ -97,7 +96,6 @@ body{
 }
 .status{ font-size: 13px; color: var(--muted); }
 
-/* marquee bulbs */
 .marquee-lights{
   position:absolute; inset:8px;
   border-radius: 18px;
@@ -133,7 +131,6 @@ body{
   50%{ opacity: .55; filter: drop-shadow(0 0 10px rgba(255,225,140,.45)); }
 }
 
-/* ---------- Body ---------- */
 .body{ position:relative; z-index:1; }
 
 .reel-window{
@@ -151,7 +148,6 @@ body{
   overflow:hidden;
 }
 
-/* window bulbs around reels */
 .window-lights{
   position:absolute; inset:10px;
   border-radius: 22px;
@@ -165,7 +161,6 @@ body{
   filter: drop-shadow(0 0 9px rgba(255,220,130,.35));
 }
 
-/* reels area */
 .reels{
   position:relative;
   display:flex;
@@ -196,7 +191,6 @@ body{
     0 10px 24px rgba(0,0,0,.35);
 }
 
-/* inner “chrome” frame inside each reel */
 .reel::before{
   content:"";
   position:absolute; inset:6px;
@@ -217,7 +211,6 @@ body{
   text-shadow: 0 8px 16px rgba(0,0,0,.35);
 }
 
-/* Payline */
 .payline{
   position:absolute;
   left: 36px; right: 36px;
@@ -229,7 +222,6 @@ body{
   opacity: .85;
 }
 
-/* Glass glare overlay */
 .glass{
   position:absolute; inset:0;
   pointer-events:none;
@@ -240,7 +232,6 @@ body{
   opacity:.35;
 }
 
-/* coin tray */
 .tray{
   margin-top: 14px;
   height: 64px;
@@ -259,7 +250,6 @@ body{
     radial-gradient(circle at 60% 65%, rgba(246,211,122,.14), transparent 45%);
 }
 
-/* ---------- Lever ---------- */
 .lever{
   position:absolute;
   right: 14px;
@@ -337,7 +327,6 @@ body{
   box-shadow: inset 0 12px 20px rgba(0,0,0,.35);
 }
 
-/* ---------- Overlay / About Me ---------- */
 .overlay{
   position:absolute; inset:0;
   display:none;
@@ -387,7 +376,6 @@ body{
   cursor:pointer;
 }
 
-/* ---------- Coins ---------- */
 .coins{
   position:absolute; inset:0;
   pointer-events:none;
@@ -406,21 +394,18 @@ body{
   will-change: transform, opacity;
 }
 
-/* Note text */
 .note{
   margin: 12px 4px 0;
   color: rgba(255,255,255,.60);
   font-size: 12px;
 }
 
-/* Responsive (normal mode) */
 @media (max-width: 600px){
   .machine{ padding-right: 84px; }
   .reel{ width: 118px; height: 138px; }
   .cell{ height: 138px; font-size: 58px; }
 }
 
-/* ---------- Secret button ---------- */
 .secret-btn{
   position: fixed;
   top: 14px;
@@ -443,7 +428,6 @@ body{
 .secret-btn:hover{ opacity: .75; transform: scale(1.04); }
 .secret-btn:active{ transform: scale(.98); }
 
-/* ---------- INSANE MODE THEME + 100 reels ---------- */
 .machine.insane{
   --cab1:#0a1b3d;
   --cab2:#020816;
@@ -472,7 +456,6 @@ body{
   filter: drop-shadow(0 0 10px rgba(110,210,255,.55));
 }
 
-/* 10x10 grid */
 .machine.insane .reels{
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -492,7 +475,6 @@ body{
   font-size: 28px;
 }
 
-/* insane responsiveness */
 @media (max-width: 600px){
   .machine.insane .reels{
     grid-template-columns: repeat(5, 1fr);
@@ -500,4 +482,5 @@ body{
   }
   .machine.insane .reel{ height: 58px; }
   .machine.insane .cell{ height: 58px; font-size: 26px; }
+
 }
