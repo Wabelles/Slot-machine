@@ -7,12 +7,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Secret button (top-right of screen) -->
   <button class="secret-btn" id="secretBtn" type="button" aria-label="Secret mode">☠</button>
 
   <main class="wrap" id="app">
     <section class="machine" aria-label="Slot machine">
-      <!-- Marquee / top sign -->
       <header class="top">
         <div class="marquee">
           <div class="marquee-lights" aria-hidden="true"></div>
@@ -23,32 +21,24 @@
         </div>
       </header>
 
-      <!-- Cabinet body -->
       <div class="body">
-        <!-- Reel window bezel -->
         <div class="reel-window">
           <div class="window-lights" aria-hidden="true"></div>
 
-          <!-- Reels host (JS will render 3 or 100 reels here) -->
           <div class="reels" id="reels" aria-label="Slot machine reels"></div>
 
-          <!-- Payline -->
           <div class="payline" aria-hidden="true"></div>
 
-          <!-- Glass glare -->
           <div class="glass" aria-hidden="true"></div>
         </div>
 
-        <!-- Coin tray -->
         <div class="tray" aria-hidden="true">
           <div class="tray-inner"></div>
         </div>
       </div>
 
-      <!-- Coin particles overlay -->
       <div class="coins" id="coins" aria-hidden="true"></div>
 
-      <!-- Lever -->
       <aside class="lever" aria-label="Lever">
         <div class="rail"></div>
         <div class="hint">PULL</div>
@@ -57,13 +47,11 @@
         <div class="lever-base" aria-hidden="true"></div>
       </aside>
 
-      <!-- Win overlay -->
       <div class="overlay" id="overlay" aria-live="polite">
         <div class="card">
           <div class="badge">JACKPOT!!!</div>
           <h2>About Me</h2>
 
-          <!-- EDIT THIS -->
           <p><strong>Nolan</strong> — "Your worst sin is that you have destroyed and betrayed yourself for nothing"</p>
           <p>I like to play gacha games and makes games.</p>
           <ul>
@@ -71,7 +59,6 @@
             <li>Interests: games (ow, gacha games), game development, Wabel, philosophy </li>
             <li>Insta: @nolanfitz2005</li>
           </ul>
-          <!-- /EDIT THIS -->
 
           <button class="btn" id="spinAgain" type="button">Spin Again</button>
         </div>
@@ -87,4 +74,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
