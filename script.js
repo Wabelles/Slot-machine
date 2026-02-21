@@ -10,8 +10,8 @@
     },
     insane: {
       name: "INSANE",
-      reelCount: 100,          // 10x10 grid
-      winChance: 1 / 100000,   // 0.00001
+      reelCount: 100,          
+      winChance: 1 / 100000,   
       status: "INSANE MODE — good luck",
     }
   };
@@ -26,11 +26,10 @@
   const reelsHost = document.getElementById("reels");
   const secretBtn = document.getElementById("secretBtn");
 
-  let reels = [];   // dynamic
-  let strips = [];  // dynamic
+  let reels = [];  
+  let strips = [];  
   let spinning = false;
 
-  // -------- WebAudio SFX (no external files needed) --------
   let audioCtx = null;
   const SFX = {
     ensure() {
@@ -81,7 +80,6 @@
   function setStatus(t){ statusEl.textContent = t; }
   function randSym(){ return symbols[Math.floor(Math.random()*symbols.length)]; }
 
-  // -------- Build / rebuild reels for a mode --------
   function renderReels(count){
     reelsHost.innerHTML = "";
     for (let i=0;i<count;i++){
@@ -135,7 +133,6 @@
     return new Promise(res => strip.addEventListener("transitionend", res, {once:true}));
   }
 
-  // -------- Coins spray --------
   function coinSpray() {
     const count = 90 + Math.floor(Math.random()*40);
     const reelsBox = reelsHost.getBoundingClientRect();
@@ -237,7 +234,6 @@
     spinning = false;
   }
 
-  // -------- Lever pull interaction --------
   const railTop = 58;
   function leverBounds(){
     const leverBox = document.querySelector(".lever").getBoundingClientRect();
@@ -309,7 +305,6 @@
     setStatus(MODES[modeKey].status);
   });
 
-  // -------- Mode toggle (secret) --------
   function setMode(nextKey){
     if (spinning) return;
     modeKey = nextKey;
@@ -336,9 +331,9 @@
     }
   });
 
-  // init
   renderReels(MODES[modeKey].reelCount);
   rebuildAllStrips();
   setLeverTop(railTop);
   setStatus(MODES[modeKey].status);
+
 })();
